@@ -106,7 +106,7 @@ The %{name}-devel package contains libraries and header files for developing app
 %files -n %libname
 %{_libdir}/libgcalc-%{api}.so.%{major}*
 
-%files -n %devname
+%files -n %develname
 %{_includedir}/gcalc-1/gcalc/gcalc.h
 %{_libdir}/libgcalc-1.so
 %{_libdir}/pkgconfig/gcalc-1.pc
