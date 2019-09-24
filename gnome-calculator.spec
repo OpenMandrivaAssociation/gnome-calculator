@@ -4,7 +4,7 @@
 %global major   0
 %define api             1
 %global libname         %mklibname gcalc %{api} %{major}
-%global devname         %mklibname -d gcalc
+%global develname         %mklibname -d gcalc
 
 Name:		gnome-calculator
 Version:	3.34.0
