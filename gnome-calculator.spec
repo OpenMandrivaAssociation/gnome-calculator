@@ -100,8 +100,6 @@ The %{name}-devel package contains libraries and header files for developing app
 %doc %{_mandir}/man1/%{name}.1.*
 %doc %{_mandir}/man1/gcalccmd.1*
 /usr/libexec/%{name}-search-provider
-%dir %{_libdir}/girepository-1.0
-%{_libdir}/girepository-1.0/GCalc-1.typelib
 
 %files -n %libname
 %{_libdir}/libgcalc-%{api}.so.%{major}*
