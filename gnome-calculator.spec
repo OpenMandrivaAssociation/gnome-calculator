@@ -1,14 +1,21 @@
 %define url_ver %(echo %{version} | cut -d. -f1,2)
 %define _disable_rebuild_configure 1
 
+%global major   0
+%define api             1
+%global libname         %mklibname gcalc %{api} %{major}
+%global develname         %mklibname -d gcalc
+
 Name:		gnome-calculator
-Version:	3.32.2
+Version:	3.34.0
 Release:	1
 Summary:	GNOME Desktop calculator
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 URL:		https://wiki.gnome.org/Calculator
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+
+BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtksourceview-4)
@@ -29,6 +36,7 @@ BuildRequires:  vala-tools
 BuildRequires:  pkgconfig(vapigen)
 Provides:	gcalctool = %{version}
 Obsoletes:	gcalctool <= 6.6.2
+Requires:       %libname = %version
 
 %description
 Calculator is an application that solves mathematical equations and is
@@ -49,6 +57,20 @@ What Calculator is not:
 - It does not emulate any existing calculator interfaces, hardware or software.
 - It is not a power-tool for professional mathematicians.
 - It is not a programming language.
+
+%package -n %libname
+Summary:  Libraries for %{name}
+Group:    System/Libraries
+	 
+%description -n %libname
+This package contains the shared libraries for %name.
+
+%package        -n %develname
+Summary:        Development files for %{name}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
+ 
+%description    -n %develname
+The %{name}-devel package contains libraries and header files for developing applications that use %{name}.
 
 %prep
 %setup -q
@@ -78,4 +100,15 @@ What Calculator is not:
 %doc %{_mandir}/man1/%{name}.1.*
 %doc %{_mandir}/man1/gcalccmd.1*
 /usr/libexec/%{name}-search-provider
+
+%files -n %libname
+%{_libdir}/libgcalc-%{api}.so.%{major}*
+
+%files -n %develname
+%{_includedir}/gcalc-1/gcalc/gcalc.h
+%{_libdir}/libgcalc-1.so
+%{_libdir}/pkgconfig/gcalc-1.pc
+%{_datadir}/gir-1.0/GCalc-1.gir
+%{_datadir}/vala/vapi/gcalc-1.deps
+%{_datadir}/vala/vapi/gcalc-1.vapi
 
