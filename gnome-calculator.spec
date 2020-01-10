@@ -74,7 +74,7 @@ The %{name}-devel package contains libraries and header files for developing app
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %meson -Ddocs=true
