@@ -1,7 +1,7 @@
 %define url_ver %(echo %{version} | cut -d. -f1,2)
 %define _disable_rebuild_configure 1
 
-%global major   0
+%global major   1
 %define api             2
 %global libname         %mklibname gcalc %{api} %{major}
 %global develname         %mklibname -d gcalc
@@ -87,28 +87,37 @@ The %{name}-devel package contains libraries and header files for developing app
 %find_lang %{name} --with-gnome
 
 %files -f %{name}.lang
-%doc COPYING NEWS
+%doc NEWS
+%license COPYING
 %{_bindir}/gcalccmd
 %{_bindir}/%{name}
+%{_libdir}/girepository-1.0/GCalc-2.typelib
+%{_libdir}/girepository-1.0/GCi-1.typelib
+%{_libexecdir}/%{name}-search-provider
 %{_datadir}/applications/org.gnome.Calculator.desktop
 %{_datadir}/glib-2.0/schemas/org.gnome.calculator.gschema.xml
 %{_datadir}/dbus-1/services/org.gnome.Calculator.SearchProvider.service
 %{_datadir}/gnome-shell/search-providers/org.gnome.Calculator-search-provider.ini
 %{_datadir}/metainfo/org.gnome.Calculator.appdata.xml
-%{_datadir}/icons/hicolor/*
-#{_libdir}/%{name}
-%doc %{_mandir}/man1/%{name}.1.*
-%doc %{_mandir}/man1/gcalccmd.1*
-/usr/libexec/%{name}-search-provider
+%{_iconsdir}/hicolor/*/apps/org.gnome.Calculator*.*
+%{_mandir}/man1/%{name}.1.*
+%{_mandir}/man1/gcalccmd.1*
 
 %files -n %libname
-#{_libdir}/libgcalc-%{api}.so.%{major}*
+%{_libdir}/libgcalc-%{api}.so.%{major}*
+%{_libdir}/libgci-1.so.0*
 
 %files -n %develname
-%{_includedir}/gcalc-1/gcalc/gcalc.h
-%{_libdir}/libgcalc-1.so
-%{_libdir}/pkgconfig/gcalc-1.pc
-%{_datadir}/gir-1.0/GCalc-1.gir
-%{_datadir}/vala/vapi/gcalc-1.deps
-%{_datadir}/vala/vapi/gcalc-1.vapi
+%{_includedir}/gci-2/
+%{_includedir}/gcalc-2/
+%{_libdir}/libgcalc-2.so
+%{_libdir}/libgci-1.so
+%{_libdir}/pkgconfig/gcalc-2.pc
+%{_libdir}/pkgconfig/gci-1.pc
+%{_datadir}/gir-1.0/GCalc-2.gir
+%{_datadir}/gir-1.0/GCi-1.gir
+%{_datadir}/vala/vapi/gcalc-2.deps
+%{_datadir}/vala/vapi/gcalc-2.vapi
+%{_datadir}/vala/vapi/gci-1.deps
+%{_datadir}/vala/vapi/gci-1.vapi
 
