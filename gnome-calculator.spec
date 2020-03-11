@@ -1,8 +1,8 @@
 %define url_ver %(echo %{version} | cut -d. -f1,2)
 %define _disable_rebuild_configure 1
 
-%global major   0
-%define api             1
+%global major   1
+%define api             2
 %global libname         %mklibname gcalc %{api} %{major}
 %global develname         %mklibname -d gcalc
 
