@@ -91,8 +91,8 @@ The %{name}-devel package contains libraries and header files for developing app
 %license COPYING
 %{_bindir}/gcalccmd
 %{_bindir}/%{name}
-%{_libdir}/girepository-1.0/GCalc-2.typelib
-%{_libdir}/girepository-1.0/GCi-1.typelib
+#{_libdir}/girepository-1.0/GCalc-2.typelib
+#{_libdir}/girepository-1.0/GCi-1.typelib
 %{_libexecdir}/%{name}-search-provider
 %{_datadir}/applications/org.gnome.Calculator.desktop
 %{_datadir}/glib-2.0/schemas/org.gnome.calculator.gschema.xml
@@ -114,8 +114,8 @@ The %{name}-devel package contains libraries and header files for developing app
 %{_libdir}/libgci-1.so
 %{_libdir}/pkgconfig/gcalc-2.pc
 %{_libdir}/pkgconfig/gci-1.pc
-#{_datadir}/gir-1.0/GCalc-2.gir
-#{_datadir}/gir-1.0/GCi-1.gir
+%{_datadir}/gir-1.0/GCalc-2.gir
+%{_datadir}/gir-1.0/GCi-1.gir
 %{_datadir}/vala/vapi/gcalc-2.deps
 %{_datadir}/vala/vapi/gcalc-2.vapi
 %{_datadir}/vala/vapi/gci-1.deps
