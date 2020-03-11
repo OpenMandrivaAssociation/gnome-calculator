@@ -102,7 +102,7 @@ The %{name}-devel package contains libraries and header files for developing app
 /usr/libexec/%{name}-search-provider
 
 %files -n %libname
-%{_libdir}/libgcalc-%{api}.so.%{major}*
+#{_libdir}/libgcalc-%{api}.so.%{major}*
 
 %files -n %develname
 %{_includedir}/gcalc-1/gcalc/gcalc.h
