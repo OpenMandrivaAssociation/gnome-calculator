@@ -20,6 +20,9 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtksourceview-4)
 BuildRequires:	pkgconfig(libsoup-2.4)
+BuildRequires:	pkgconfig(gobject-introspection-1.0)
+BuildRequires:	pkgconfig(libhandy-1)
+BuildRequires:	cmake
 BuildRequires:	desktop-file-utils
 BuildRequires:	gettext
 BuildRequires:	flex
