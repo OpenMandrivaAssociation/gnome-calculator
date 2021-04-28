@@ -1,5 +1,5 @@
 %define url_ver %(echo %{version} | cut -d. -f1,2)
-%define _disable_rebuild_configure 1
+%global __requires_exclude libgcalc-2\.so
 
 %global major   1
 %define api             2
@@ -8,7 +8,7 @@
 
 Name:		gnome-calculator
 Version:	40.0
-Release:	1
+Release:	2
 Summary:	GNOME Desktop calculator
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
