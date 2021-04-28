@@ -1,5 +1,5 @@
 %define url_ver %(echo %{version} | cut -d. -f1,2)
-%global __requires_exclude libgcalc-2\.so
+%global __requires_exclude libg(calc-2|ci-1)\.so
 
 %global major   1
 %define api             2
