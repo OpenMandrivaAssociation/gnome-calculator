@@ -80,7 +80,7 @@ The %{name}-devel package contains libraries and header files for developing app
 %autopatch -p1
 
 %build
-%meson -Ddocs=true
+%meson
 %meson_build
 
 %install
