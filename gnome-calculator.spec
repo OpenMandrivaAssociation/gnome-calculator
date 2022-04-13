@@ -22,6 +22,7 @@ BuildRequires:	pkgconfig(gtksourceview-5)
 BuildRequires:	pkgconfig(libsoup-2.4)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(libhandy-1)
+BuildRequires:	pkgconfig(libadwaita-1)
 BuildRequires:	cmake
 BuildRequires:	desktop-file-utils
 BuildRequires:	gettext
