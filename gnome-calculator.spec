@@ -7,7 +7,7 @@
 %global develname         %mklibname -d gcalc
 
 Name:		gnome-calculator
-Version:	42.0
+Version:	42.1
 Release:	1
 Summary:	GNOME Desktop calculator
 Group:		Graphical desktop/GNOME
