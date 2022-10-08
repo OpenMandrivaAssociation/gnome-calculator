@@ -7,7 +7,7 @@
 %global develname         %mklibname -d gcalc
 
 Name:		gnome-calculator
-Version:	42.2
+Version:	43.0.1
 Release:	1
 Summary:	GNOME Desktop calculator
 Group:		Graphical desktop/GNOME
@@ -19,7 +19,7 @@ BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk4)
 BuildRequires:	pkgconfig(gtksourceview-5)
-BuildRequires:	pkgconfig(libsoup-2.4)
+BuildRequires:	pkgconfig(libsoup-3.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(libhandy-1)
 BuildRequires:	pkgconfig(libadwaita-1)
