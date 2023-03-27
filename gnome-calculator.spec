@@ -6,6 +6,8 @@
 %global libname         %mklibname gcalc %{api} %{major}
 %global develname         %mklibname -d gcalc
 
+%global optflags %{optflags} -Wno-incompatible-function-pointer-types
+
 Name:		gnome-calculator
 Version:	44.0
 Release:	1
