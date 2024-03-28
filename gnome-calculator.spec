@@ -9,7 +9,7 @@
 %global optflags %{optflags} -Wno-incompatible-function-pointer-types
 
 Name:		gnome-calculator
-Version:	45.0.2
+Version:	46.0
 Release:	1
 Summary:	GNOME Desktop calculator
 Group:		Graphical desktop/GNOME
@@ -88,7 +88,6 @@ The %{name}-devel package contains libraries and header files for developing app
 
 %install
 %meson_install
-
 
 %find_lang %{name} --with-gnome
 
