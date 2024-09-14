@@ -9,7 +9,7 @@
 %global optflags %{optflags} -Wno-incompatible-function-pointer-types
 
 Name:		gnome-calculator
-Version:	46.1
+Version:	47.rc
 Release:	1
 Summary:	GNOME Desktop calculator
 Group:		Graphical desktop/GNOME
