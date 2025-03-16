@@ -103,7 +103,7 @@ The %{name}-devel package contains libraries and header files for developing app
 %{_datadir}/glib-2.0/schemas/org.gnome.calculator.gschema.xml
 %{_datadir}/dbus-1/services/org.gnome.Calculator.SearchProvider.service
 %{_datadir}/gnome-shell/search-providers/org.gnome.Calculator-search-provider.ini
-%{_datadir}/metainfo/org.gnome.Calculator.appdata.xml
+#{_datadir}/metainfo/org.gnome.Calculator.appdata.xml
 %{_iconsdir}/hicolor/*/apps/org.gnome.Calculator*.*
 %{_mandir}/man1/%{name}.1.*
 %{_mandir}/man1/gcalccmd.1*
