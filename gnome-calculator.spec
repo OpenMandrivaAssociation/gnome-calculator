@@ -9,7 +9,7 @@
 %global optflags %{optflags} -Wno-incompatible-function-pointer-types
 
 Name:		gnome-calculator
-Version:	48.1
+Version:	49.rc
 Release:	1
 Summary:	GNOME Desktop calculator
 Group:		Graphical desktop/GNOME
@@ -25,6 +25,7 @@ BuildRequires:	pkgconfig(libsoup-3.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(libhandy-1)
 BuildRequires:	pkgconfig(libadwaita-1)
+BuildRequires:	pkgconfig(blueprint-compiler)
 BuildRequires:	cmake
 BuildRequires:	desktop-file-utils
 BuildRequires:	gettext
