@@ -10,7 +10,7 @@
 
 Name:		gnome-calculator
 Version:	49.2
-Release:	1
+Release:	2
 Summary:	GNOME Desktop calculator
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
