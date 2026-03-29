@@ -9,8 +9,8 @@
 %global optflags %{optflags} -Wno-incompatible-function-pointer-types
 
 Name:		gnome-calculator
-Version:	49.2
-Release:	2
+Version:	50.0
+Release:	1
 Summary:	GNOME Desktop calculator
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
@@ -33,7 +33,7 @@ BuildRequires:	flex
 BuildRequires:	bison
 BuildRequires:	intltool
 BuildRequires:	itstool
-BuildRequires:	libxml2-utils
+BuildRequires:	libxml2-utils >= 2.15.2
 BuildRequires:	pkgconfig(mpfr)
 BuildRequires:	libmpc-devel
 BuildRequires:  gmp-devel
